@@ -136,6 +136,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
             
             myLabel.text = "Game Over"
             
+            
         }else if collision == spaceCat | parkingCat{
             
             self.score = self.score + 1
@@ -188,6 +189,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
                         // Load the SKScene from 'GameScene.sks'
                         if let scene = SKScene(fileNamed: "GameScene") {
                             // Set the scale mode to scale to fit the window
+                            scene.size = CGSize(width: scene.size.width * 1.3, height: scene.size.height * 1.3)
                             scene.scaleMode = .aspectFill
                             
                             // Present the scene
